@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto+Condensed:wght@700&display=swap');
+
+
+
+body{
+ height: 100vh;
+  background-image: linear-gradient(to right bottom, #0f4681, #175995, #206ca9, #2980bd, #3394d1, #3394d1, #3394d1, #3394d1, #2980bd, #206ca9, #175995, #0f4681);
+}
+
+h1{font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;}
+
+  li{font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;}
