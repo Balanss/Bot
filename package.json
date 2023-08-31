@@ -1,12 +1,12 @@
 {
   "name": "lionbot",
-  "homepage":"https://Balanss.github.io/Bot",
+  "homepage": "https://Balanss.github.io/Bot",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "deploy":"gh-pages -d dist",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -15,6 +15,7 @@
     "dot": "^1.1.3",
     "env": "^0.0.2",
     "firebase": "^10.3.1",
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
