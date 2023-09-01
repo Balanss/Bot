@@ -8,6 +8,20 @@ const [name,setName] = useState([])
 const[middle,setMiddle] = useState([])
 
 
+const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+useEffect(() => {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    setDeferredPrompt(e);
+  });
+}, []);
+
+const addToHomeScreen = () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+  }
+};
 
 
 
@@ -17,8 +31,9 @@ const[middle,setMiddle] = useState([])
 <Functions name={name} setName={setName} setMiddle={setMiddle} />
 
 <section className='mt-10 mb-10 ml-5 text-white drop-shadow-xl ' >
+  <h1>  </h1>
 {name.map((x,id) => (
-<h1 className='text-6xl  drop-shadow-xl' key={id}> Hello, {x.Name === 0 ? '':x.Name} </h1> 
+<h1 className='text-6xl  drop-shadow-xl' key={id}> Hello,  {x.Name === 0 ? '':x.Name} </h1> 
 ))}
 </section>
 
@@ -43,6 +58,12 @@ const[middle,setMiddle] = useState([])
 ))}   
 </section>
 
+
+
+<div>
+      {/* Your app content */}
+      <button onClick={addToHomeScreen}>Add to Home Screen</button>
+    </div>
 
 
     </div>
