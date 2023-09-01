@@ -3,25 +3,39 @@ import Functions from './Functions'
 import { auth, fs,db } from '../Firebase'
 import {collection,deleteDoc,doc,updateDoc} from "firebase/firestore";
 
+
+
 export default function Main() {
 const [name,setName] = useState([])
 const[middle,setMiddle] = useState([])
 
 
-const [deferredPrompt, setDeferredPrompt] = useState(null);
-
 useEffect(() => {
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    setDeferredPrompt(e);
-  });
+  const script = document.createElement('script');
+  script.src = 'https://cdn.voiceflow.com/widget/bundle.mjs';
+  script.type = 'text/javascript';
+  script.async = true;
+  script.onload = () => {
+    window.voiceflow.chat.load({
+      verify: { projectID: import.meta.env.VITE_BOT },
+      url: 'https://general-runtime.voiceflow.com',
+      versionID: 'production',
+    });
+    // Introduce a small delay to ensure the widget is fully initialized
+    setTimeout(() => {
+      window.voiceflow.chat.open();
+    }, 1000); // Adjust the delay as needed
+
+  };
+  document.body.appendChild(script);
+
+  return () => {
+    // Cleanup if necessary
+    document.body.removeChild(script);
+  };
 }, []);
 
-const addToHomeScreen = () => {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-  }
-};
+
 
 
 
@@ -40,7 +54,7 @@ const addToHomeScreen = () => {
 <br/>
 <hr className='w-[50vw] border-yellow-500 border-b-4'/>
 
-<section className='mt-10 mb-10 ml-5 text-white drop-shadow-xl'>
+<section className='mt-10 mb-10 ml-5 pb-10 text-white drop-shadow-xl'>
  {middle.map((x,id) => (
 
 <div key={id} className='text-2xl'>
@@ -60,10 +74,6 @@ const addToHomeScreen = () => {
 
 
 
-<div>
-      {/* Your app content */}
-      <button onClick={addToHomeScreen}>Add to Home Screen</button>
-    </div>
 
 
     </div>
