@@ -23,6 +23,7 @@ const[middle,setMiddle] = useState([])
 </section>
 
 <br/>
+<hr className='w-[50vw] border-yellow-500 border-b-4'/>
 
 <section className='mt-10 mb-10 ml-5 text-white drop-shadow-xl'>
  {middle.map((x,id) => (
@@ -33,6 +34,8 @@ const[middle,setMiddle] = useState([])
 <li className=' drop-shadow-xl'>{x.Location}</li>
 
 <li className=' drop-shadow-xl'>{x.description}</li>
+
+
 
 </div>
 

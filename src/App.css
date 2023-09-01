@@ -5,7 +5,11 @@
 
 body{
  height: 100vh;
-  background-image: linear-gradient(to right bottom, #0f4681, #175995, #206ca9, #2980bd, #3394d1, #3394d1, #3394d1, #3394d1, #2980bd, #206ca9, #175995, #0f4681);
+ background: #2349ce;
+ background-image: url("../src/Comp/Images/zenbg-1.png");
+ background-repeat: repeat-x, repeat;
+
+
 }
 
 h1{font-family: 'Open Sans', sans-serif;
