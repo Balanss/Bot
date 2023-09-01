@@ -24,7 +24,7 @@ useEffect(() => {
     // Introduce a small delay to ensure the widget is fully initialized
     setTimeout(() => {
       window.voiceflow.chat.open();
-    }, 1000); // Adjust the delay as needed
+    }, 3000); // Adjust the delay as needed
 
   };
   document.body.appendChild(script);
