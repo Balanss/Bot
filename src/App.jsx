@@ -1,19 +1,28 @@
 import { useState , useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Main from './Comp/Main'
-import Top from './Comp/Top'
+import Home from './Comp/Home/Home'
+import { HashRouter,Routes ,Route } from 'react-router-dom'
+import FoodBot from './Comp/FoodBot/FoodBot'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
 
 
   return (
     <div >
-     <Top/>
-      <Main/>
+<HashRouter>
+<Routes>
+<Route path='/' element={<Home/>} />
+<Route path='/foodbot' element={<FoodBot/>} />
+<Route path='/main' element={<Main/>} />
+<Route path='/meds' element={<Main/>} />
+</Routes>
+</HashRouter>
+
     </div>
   );
 }
