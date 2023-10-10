@@ -16,12 +16,12 @@ export default function Home() {
 
     setTimeout(() => {
       if (localStorage.getItem("password") === import.meta.env.VITE_PASW_FOOD) {
-        window.location.href = "/foodbot";
+        window.location.href = "/#/foodbot";
       }
       if (
         localStorage.getItem("password") === import.meta.env.VITE_PASW_HEALTH
       ) {
-        window.location.href = "/meds";
+        window.location.href = "/#/meds";
       } else {
         setMessage("wrong password");
       }
@@ -32,17 +32,14 @@ export default function Home() {
     <div className="text-center">
       <section className="mt-10 mb-10 ml-5 text-white drop-shadow-xl ">
         <h1> </h1>
-        <h1 className="text-6xl  drop-shadow-xl">
-          {" "}
-          Welcome To Project Aimigo{" "}
-        </h1>
+        <h1 className="text-6xl  drop-shadow-xl"> Welcome Project Aimigo </h1>
       </section>
       <br />
 
       <section className="mt-10 mb-10 ml-5 pb-10 text-white drop-shadow-xl">
         <h1 className="text-xl  drop-shadow-lg">
           {" "}
-          Enter password to continue{" "}
+          enter password to continue{" "}
         </h1>
         <input
           className="text-2xl text-black drop-shadow-xl mt-2"
