@@ -1,11 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import animation from "../Images/animation.gif";
+import { useNavigate } from "react-router";
 
 export default function Home() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   //create a pasw enter form with state that only allows you to enter if you have the password
   // style the button with primary color and shadow
@@ -16,12 +18,12 @@ export default function Home() {
 
     setTimeout(() => {
       if (localStorage.getItem("password") === import.meta.env.VITE_PASW_FOOD) {
-        window.location.href = "/foodbot";
+        navigate("/foodbot");
       }
       if (
         localStorage.getItem("password") === import.meta.env.VITE_PASW_HEALTH
       ) {
-        window.location.href = "/meds";
+        navigate("/main");
       } else {
         setMessage("wrong password");
       }
