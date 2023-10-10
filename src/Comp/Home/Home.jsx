@@ -16,12 +16,12 @@ export default function Home() {
 
     setTimeout(() => {
       if (localStorage.getItem("password") === import.meta.env.VITE_PASW_FOOD) {
-        window.location.href = "/#/foodbot";
+        window.location.href = "/foodbot";
       }
       if (
         localStorage.getItem("password") === import.meta.env.VITE_PASW_HEALTH
       ) {
-        window.location.href = "/#/meds";
+        window.location.href = "/meds";
       } else {
         setMessage("wrong password");
       }
