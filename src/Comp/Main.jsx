@@ -4,39 +4,8 @@ import Functions from "./Functions";
 import Nav from "../Nav/Nav";
 
 export default function Main() {
-<<<<<<< HEAD
-const [name,setName] = useState([])
-const[middle,setMiddle] = useState([])
-
-
-useEffect(() => {
-  const script = document.createElement('script');
-  script.src = 'https://cdn.voiceflow.com/widget/bundle.mjs';
-  script.type = 'text/javascript';
-  script.async = true;
-  script.onload = () => {
-    window.voiceflow.chat.load({
-      verify: { projectID: import.meta.env.VITE_BOT },
-      url: 'https://general-runtime.voiceflow.com',
-      versionID: 'production',
-    });
-    // Introduce a small delay to ensure the widget is fully initialized
-    // setTimeout(() => {
-    //   window.voiceflow.chat.open();
-    // }, 3000); // Adjust the delay as needed
-
-  };
-  document.body.appendChild(script);
-
-  return () => {
-    // Cleanup if necessary
-    document.body.removeChild(script);
-  };
-}, []);
-=======
   const [name, setName] = useState([]);
   const [middle, setMiddle] = useState([]);
->>>>>>> a5f11e48d7c7b3a6d08ccca5c8295f1901035008
 
   useEffect(() => {
     const script = document.createElement("script");
