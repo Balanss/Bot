@@ -4,12 +4,9 @@
 
 
 body{
- height: 100vh;
- background: #2349ce;
- background-image: url("../src/Comp/Images/zenbg-1.png");
- background-repeat: repeat-x, repeat;
-
-
+  background: #a3c1b8;
+ background-image: url("../src/Comp/Images/zen.jpg");
+ background-size: cover;
 }
 
 h1{font-family: 'Open Sans', sans-serif;
@@ -17,3 +14,14 @@ h1{font-family: 'Open Sans', sans-serif;
 
   li{font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;}
+
+    .c-ivtLaR-gAaWLG-withChat-true > .c-fikloo {
+      /* width: 50vw !important;
+      left:auto !important;
+      right:auto !important;
+      margin: auto !important;
+      position: relative !important;
+      bottom: auto;
+      top: 50px !important;
+     */
+    }
